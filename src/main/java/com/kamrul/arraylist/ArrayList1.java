@@ -1,5 +1,6 @@
 package com.kamrul.arraylist;
 import java.util.ArrayList;
+import java.util.Iterator;
 public class ArrayList1 {
     public static void main(String[] args) {
         
@@ -15,9 +16,10 @@ public class ArrayList1 {
         number.add(40);
         number.add(4, 50); //----------(2)
         
-        //print [for each loop] is best system
-        for (int x : number) {
-            System.out.print(" " + x);  //----------(3)
+        //print [iterator system]
+        Iterator itr = number.iterator();
+        while (itr.hasNext()) {
+            System.out.print(" " + itr.next());  //----------(3)
         }
         System.out.printf("\n");
         System.out.print("arraylist size : " + number.size());
