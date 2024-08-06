@@ -15,13 +15,9 @@ public class ArrayList1 {
         number.add(40);
         number.add(4, 50); //----------(2)
         
-        //if you want all item remove --------------
-        number.removeAll(number);
-        System.out.println("After removing all :");
-
-        //if you want all item remove --------------
-        number.clear();
-        System.out.println("After clearing all :");
+        //if arrayList is empty or not ? 
+        boolean check = number.isEmpty();
+        System.out.println("arrayList empty : " + check);
         
         System.out.println("arraylist size : " + number.size());
     }
@@ -40,11 +36,11 @@ public class ArrayList1 {
         equals();
         addAll();
            
-    1নং সমীকরণে ArrayList এর size নির্ধারণ করে দেওয়া হয় নাই, আপনি যা elements দিবেন, তা auto add হবে।।
+    1নং সমীকরণে ArrayList1 এর size নির্ধারণ করে দেওয়া হয় নাই, আপনি যা elements দিবেন, তা auto add হবে।।
     2নং সমীকরণে নির্ধারণ করে দেওয়া হয়েছে, যে এই element -কে এতো নাম্বারে সেট করে দাও।।
         কোনো element কত নাম্বার স্থানে দেখতে চাও, তা নির্ধারণ করে দেওয়া যায়।।
-    3নং সমীকরণকে প্রথমেই print করে দেখানো হয়েছে, তার আগে কোন কাজ করা হয় নাই এবং ফলাফল শূন্য দেখানো হয়েছে।।
-        array declare করার পর print করলে result show করবে।।
+    3. যদি কোন element না থাকে, তাহলে result কে true দেখাবে।। 
+       আর যদি কোন element থাকে, তাহলে result কে false দেখাবে।।
     
     বি.দ্র.: ArrayList নামে same class create করতে পারবেন না।। যদি এখানে সমস্যা না ও করে, তবে app crush করবে।।
     
