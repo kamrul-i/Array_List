@@ -4,7 +4,7 @@ public class ArrayList1 {
     public static void main(String[] args) {
 
         ArrayList<Integer> number = new ArrayList<>(); //----------(1)
-        
+
         //add elements to ArrayList
         number.add(10);
         number.add(20);
@@ -12,9 +12,9 @@ public class ArrayList1 {
         number.add(40);
         number.add(4, 50); //----------(2)
         
-        //contains(); method, if you want 1 contains remove
-        number.remove(2); //যেমন, 2nd number element-কে remove করে দাও।।
-        System.out.println("After removing ArrayList contains : " + number);
+        //position select. যেমন, 20 কত নাম্বারে আছে বলে দাও।।
+        int position = number.indexOf(20);
+        System.out.print("The index of 20 is = " + position);
     }
     /*
         Some methods related to ArrayList
