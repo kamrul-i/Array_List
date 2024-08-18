@@ -3,18 +3,34 @@ import java.util.ArrayList;
 public class ArrayList1 {
     public static void main(String[] args) {
 
-        ArrayList<Integer> number = new ArrayList<>(); //----------(1)
+        ArrayList<Integer> number1 = new ArrayList<>();  //----------(1)
+        ArrayList<Integer> number2 = new ArrayList<>();  //----------(1)
+        ArrayList<Integer> number3 = new ArrayList<>();  //----------(1)
 
         //add elements to ArrayList
-        number.add(10);
-        number.add(20);
-        number.add(30);
-        number.add(40);
-        number.add(4, 50); //----------(2)
-        
-        //position select. যেমন, 20 কত নাম্বারে আছে বলে দাও।।
-        int position = number.indexOf(20);
-        System.out.print("The index of 20 is = " + position);
+        number1.add(1);
+        number1.add(2);
+        number1.add(3);
+        number1.add(4);
+        number1.add(4, 5); //----------(2)
+
+        number2.add(10);
+        number2.add(20);
+        number2.add(30);
+        number2.add(40);
+        number2.add(4, 50); //----------(2)
+
+        //addAll(); in use //number1 এর সকল elements-কে number3-তে add করে দাও।।
+        number3.addAll(number1);
+        System.out.println("number3 = " + number3);
+
+        //equals(); in use //number1 এর সকল elements-কী number2 এর সমান ??
+        boolean result = number1.equals(number2);
+        System.out.println("number1 == number2 : " + result);
+
+        //equals(); in use //number1 এর সকল elements-কী number3 এর সমান ??
+        result = number1.equals(number3);
+        System.out.println("number1 == number3 : " + result);
     }
     /*
         Some methods related to ArrayList
