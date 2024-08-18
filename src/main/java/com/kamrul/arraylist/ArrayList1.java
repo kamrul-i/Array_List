@@ -2,12 +2,9 @@ package com.kamrul.arraylist;
 import java.util.ArrayList;
 public class ArrayList1 {
     public static void main(String[] args) {
+
+        ArrayList<Integer> number = new ArrayList<>(); //----------(1)
         
-        ArrayList<Integer> number = new ArrayList<>();  //----------(1)
-
-        System.out.println("arraylist size : " + number.size());
-        System.out.printf("\n");
-
         //add elements to ArrayList
         number.add(10);
         number.add(20);
@@ -15,15 +12,9 @@ public class ArrayList1 {
         number.add(40);
         number.add(4, 50); //----------(2)
         
-        //if you want 1 contains find -----------------
-        int x = number.get(1);
-        System.out.print("1 no index is in the list = " + x);
-
-        System.out.printf("\n\n");
-
-        //if you want 1 contains find -----------------
-        boolean contains = number.contains(40);
-        System.out.println("40 is in the list ? " + contains);
+        //contains(); method, if you want 1 contains remove
+        number.remove(2); //যেমন, 2nd number element-কে remove করে দাও।।
+        System.out.println("After removing ArrayList contains : " + number);
     }
     /*
         Some methods related to ArrayList
