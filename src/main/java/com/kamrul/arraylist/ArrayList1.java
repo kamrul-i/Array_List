@@ -1,36 +1,32 @@
 package com.kamrul.arraylist;
 import java.util.ArrayList;
+import java.util.Collections;
 public class ArrayList1 {
     public static void main(String[] args) {
 
-        ArrayList<Integer> number1 = new ArrayList<>();  //----------(1)
-        ArrayList<Integer> number2 = new ArrayList<>();  //----------(1)
-        ArrayList<Integer> number3 = new ArrayList<>();  //----------(1)
+        ArrayList<Integer> number = new ArrayList<>();  //----------(1)
 
+        //Sorting in ascending & descending.
         //add elements to ArrayList
-        number1.add(1);
-        number1.add(2);
-        number1.add(3);
-        number1.add(4);
-        number1.add(4, 5); //----------(2)
+        number.add(1);
+        number.add(2);
+        number.add(-3);
+        number.add(4);
+        number.add(4, 5);
 
-        number2.add(10);
-        number2.add(20);
-        number2.add(30);
-        number2.add(40);
-        number2.add(4, 50); //----------(2)
+        number.add(10);
+        number.add(-20);
+        number.add(30);
+        number.add(-40);
+        number.add(9, 50); //----------(2)
 
-        //addAll(); in use //number1 এর সকল elements-কে number3-তে add করে দাও।।
-        number3.addAll(number1);
-        System.out.println("number3 = " + number3);
+        System.out.println("before sorting : " + number);
 
-        //equals(); in use //number1 এর সকল elements-কী number2 এর সমান ??
-        boolean result = number1.equals(number2);
-        System.out.println("number1 == number2 : " + result);
+        Collections.sort(number);
+        System.out.println("after sorting is ascending : " + number);
 
-        //equals(); in use //number1 এর সকল elements-কী number3 এর সমান ??
-        result = number1.equals(number3);
-        System.out.println("number1 == number3 : " + result);
+        Collections.sort(number, Collections.reverseOrder());
+        System.out.println("after sorting is descending : " + number);
     }
     /*
         Some methods related to ArrayList
